@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false">
+    <head>
+        <meta charset="UTF-16">
+        <!--<meta http-equiv="refresh" content="0.5" > -->
+        <meta name="Description" CONTENT="Numle">
+        <meta name="viewport" content="height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <script src="/sdk.js"></script>
+
+       
+
+    <title>Numle</title>
+   
+    <style>
+       
+        body {
+          -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+
+        
+        text-align:center;
+        position: relative;
+        padding: 0px;
+        }
+
+       
+
+#leaderboard {
+  font-size: 2vmin;
+  position: absolute;
+  bottom: 0px;
+  right: 0vw;
+  background-color:rgba(255, 255, 255, 0.5);
+  display: table;
+  width:30vw;
+  height:auto;
+  text-align: justify;
+}
+
+h1 {
+  font-size: 3vmin;
+}
+
+#lives {
+  height: 4vmin;
+  width: 90vw;
+  left: 5vw;
+  bottom: 1vh;
+  position:fixed;
+  font-size: 3vmin;
+  text-align: center;
+  background-color:rgba(255,255,255,0.5);
+  border-radius: 2vmin;
+}
+
+    </style>
+
+    
+    
+    </head>
+    <body style="background-image: url(bk.jpg); background-size: cover;" onresize="resize()">
+      
+      <script src="functions.js"></script>
+      <script src="Problem.js"></script>
+      <script src="Helper.js"></script>
+      <script src="Game.js"></script>
+      
+    <canvas id="canvas">
+ 
+
+    </canvas>
+    <p id="lives"></p>
+    <div id = "leaderboard" style="position:fixed; top:40vh; left:40vw; display:none;"></div>
+      <p id="lang" style="bottom:0px; left:95vw; position:fixed; display:none;">Language</p>
+      
+    </body>
+    
+</html>
