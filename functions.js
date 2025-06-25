@@ -3,7 +3,7 @@ function setText(textRu, textEn) {
     
     
     if (document.getElementById("lang").textContent.includes("ru")) {
-        console.log("Setting ru");
+        //console.log("Setting ru");
         return textRu;
     }
     
