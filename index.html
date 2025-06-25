@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html oncontextmenu="return false">
     <head>
-        <meta charset="UTF-16">
+        <meta charset="UTF-8">
         <!--<meta http-equiv="refresh" content="0.5" > -->
         <meta name="Description" CONTENT="Numle">
         <meta name="viewport" content="height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <script src="/sdk.js"></script>
-
-       
+        <script src="functions.js"></script>
+      <script src="Helper.js"></script>
+      <script src="Circle.js"></script>
+      <script src="Orbit.js"></script>
+      <script src="Spear.js"></script>
+      <script src="SpearManager.js"></script>
+      <script src="Field.js"></script>
+      <script src="Game.js"></script>
 
     <title>Numle</title>
    
@@ -31,17 +37,6 @@
 
        
 
-#leaderboard {
-  font-size: 2vmin;
-  position: absolute;
-  bottom: 0px;
-  right: 0vw;
-  background-color:rgba(255, 255, 255, 0.5);
-  display: table;
-  width:30vw;
-  height:auto;
-  text-align: justify;
-}
 
 h1 {
   font-size: 3vmin;
@@ -49,7 +44,18 @@ h1 {
 
 #lives {
   height: 4vmin;
-  width: 90vw;
+  width: 45vw;
+  left: 55vw;
+  bottom: 1vh;
+  position:fixed;
+  font-size: 3vmin;
+  text-align: center;
+  background-color:rgba(255,255,255,0.5);
+  border-radius: 2vmin;
+}
+#points {
+  height: 4vmin;
+  width: 45vw;
   left: 5vw;
   bottom: 1vh;
   position:fixed;
@@ -64,19 +70,19 @@ h1 {
     
     
     </head>
-    <body style="background-image: url(bk.jpg); background-size: cover;" onresize="resize()">
+    <body onresize="resize()" style="background-color: rgba(255,247,240,255);">
       
-      <script src="functions.js"></script>
-      <script src="Problem.js"></script>
-      <script src="Helper.js"></script>
-      <script src="Game.js"></script>
+      
       
     <canvas id="canvas">
  
 
     </canvas>
-    <p id="lives"></p>
-    <div id = "leaderboard" style="position:fixed; top:40vh; left:40vw; display:none;"></div>
+    
+  
+    <p id="score" style="bottom:0vmin; margin-bottom: 2vh; left:30vw; width:auto; position:fixed;color: #660000; font-size:3vmin;"></p>
+    
+      <button id="newGame" style="bottom:5vmin; left:30vw; margin-bottom: 2vh; position:fixed;color: #660000; border-radius:0.5vmin; border-width:0.5vmin; height:3vmin; font-size:3vmin; padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;width:auto;height:auto;" onclick="newGame()">New game</button>
       <p id="lang" style="bottom:0px; left:95vw; position:fixed; display:none;">Language</p>
       
     </body>
